@@ -1,0 +1,95 @@
+yarn init
+
+possibilidade de trabalhar com a interface de linha de comando do babel:
+yarn add @babel/cli
+
+yarn add @babel/preset-env
+
+
+Arquivo de configuração do babel:
+.babelrc
+
+
+yarn add @babel/core
+
+
+
+
+yarn dev
+
+
+
+-w : automatico, vai ficar monitorando
+"dev": "babel ./main.js -o ./bundle.js -w"
+
+
+
+
+yarn add @babel/plugin-proposal-object-rest-spread
+
+
+
+yarn dev
+
+
+REST -> pegar o resto das outras variaveis ...resto
+
+
+
+-> webpack
+yarn add webpack webpack-cli -D
+
+
+Criar webpack.config.js: Arquivo principal de configuração do webpack
+
+
+yarn add babel-loader -D
+
+
+Executar o webpack: yarn dev
+
+
+pode ter um export default e vários exports sem default
+
+
+pasta src: todos arquivos que o webpack precisa monitorar
+public: que nao precisa monitorar
+
+
+
+yarn add webpack-dev-server -D
+
+
+
+Comando para colocar ele na web em servidor:
+"build": "webpack --mode=production" -> comando para produção
+
+Trabalhar com o nosso projeto offline: o dev server dá um refresh automaticamente na página
+"dev": "webpack-dev-server --mode=development",
+
+
+Biblioteca para trabalhar com async/await: deixa o código muito mais limpo
+- Não precisa código com muito callback, utilizando cascata com then e catch
+
+
+yarn add @babel/plugin-transform-async-to-generator -D
+yarn add @babel/polyfill -D
+
+
+-D : instala como dependencia de desenvolvimento
+
+
+Quando usa async function, automaticamente ela vira uma promise
+
+Só consegue usar o await se estiver dentro de uma função com async
+
+
+
+
+
+
+
+Biblioteca Axios: trabalhar com uma Biblioteca com requisições assincronas
+yarn add axios -> não é dependencia de desenvolvimento entao nao precisa do -D
+
+axios.get e todas as funcoes do axios retornam promises

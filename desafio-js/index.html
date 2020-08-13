@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" name="name">
+    <button onClick="appendToList()">Adicionar</button>
+
+    <script>
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+        //document.getElementsByTagName('body')[0];
+        var body = document.querySelector('body');
+
+
+        var buttonElement = document.createElement('button');
+        var buttonShadowBox = document.createElement('button');
+        var buttonCool = document.createElement('button');
+
+        var textElement = document.createTextNode('Clique aqui para visualizar');
+        buttonElement.appendChild(textElement);
+        buttonElement.setAttribute('class', 'button-box-view');
+
+        
+
+        var redBoxElement = document.createElement('div');
+
+        redBoxElement.style.width = '100px';
+        redBoxElement.style.height = '100px';
+        redBoxElement.style.backgroundColor = '#f00';
+        //redBoxElement.style.boxShadow = '4px 5px 6px 1px black';
+
+        body.appendChild(buttonElement);
+
+        buttonElement.onclick = function() {
+            body.appendChild(redBoxElement);
+
+            
+            var textElement = document.createTextNode('Clique para adicionar a sombra');
+            buttonShadowBox.style.marginTop = '20px';
+            buttonShadowBox.appendChild(textElement);
+            body.appendChild(buttonShadowBox);
+            
+            
+            console.log("legal cara");
+        }
+
+
+
+        buttonShadowBox.onclick = function() {
+            redBoxElement.style.boxShadow = '4px 5px 6px 1px black';
+            var textElement = document.createTextNode('LEGAL');
+            buttonCool.style.marginTop = '20px';
+            buttonCool.style.marginLeft = '20px';
+            buttonCool.appendChild(textElement);
+            body.appendChild(buttonCool);
+
+            body.appendChild(document.createElement('br'));
+            paragraph = document.createElement('p')
+            paragraph.innerText = 'Clique várias vezes no LEGAL';
+            body.appendChild(paragraph);
+
+            // essa função de clique não funciona mais
+            buttonShadowBox.onclick = null;
+        }
+
+        
+
+        var countRecShadows = 0;
+        buttonCool.onclick = function() {
+            console.log('hellow');
+            rectangleShadow = document.createElement('div');
+            rectangleShadow.style.boxShadow = '4px 5px 6px 1px black';
+            
+            if(countRecShadows < 6 || countRecShadows > 9)
+                body.appendChild(document.createElement('br'));
+            
+            countRecShadows++;
+            
+            if(countRecShadows <= 15)
+                body.appendChild(rectangleShadow);
+        }
+
+
+        redBoxElement.onmouseenter = function() {
+            redBoxElement.style.backgroundColor = getRandomColor();
+        }
+
+
+        
+
+        var names = ["Diego", "Gabriel", "Lucas"];
+        listNames = document.createElement('ul')
+
+        for (name of names)
+        {
+            var itemList = document.createElement('li');
+            itemList.innerText = name;
+            listNames.appendChild(itemList);
+        }
+
+        body.appendChild(listNames);
+
+
+        var inputText = document.querySelector('input[name=name]');
+
+        function appendToList()
+        {
+            console.log(inputText);
+            var itemList = document.createElement('li');
+            itemList.innerText = inputText.value;
+            listNames.appendChild(itemList);
+
+            inputText.value = '';
+        }
+
+    </script>
+</body>
+</html>
