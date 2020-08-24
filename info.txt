@@ -24,7 +24,7 @@ yarn dev
 
 
 
-
+rest/spread
 yarn add @babel/plugin-proposal-object-rest-spread
 
 

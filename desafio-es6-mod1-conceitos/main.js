@@ -113,7 +113,7 @@ console.log(arrplus10);
 
 // 3.2
 // Dica: Utilize uma constante pra function
-const usuario = { nome: 'Diego', idade: 23 };
+var usuario = { nome: 'Diego', idade: 23 };
 /*
 function mostraIdade(usuario) {
  return usuario.idade;
@@ -141,14 +141,14 @@ console.log(mostraIdade4(usuario));
 
 // 3.3
 // Dica: Utilize uma constante pra function
-const nome = "Diego";
-const idade = 23;
-const outro = "eh mesmo";
+var nome = "Diego";
+var idade = 23;
+var outro = "eh mesmo";
 function mostraUsuario(nome = 'Diego', idade = 18) {
     return { nome, idade };
 }
 console.log(mostraUsuario(nome, idade));
-mostraUsuario(nome);
+console.log(mostraUsuario(nome));
 
 const mostraUsuario2 = (nome, idade) => ({nome, idade });
 const mostraUsuario3 = (idade) => ({ idade });
@@ -181,33 +181,59 @@ console.log(promise2);
 // 4.1: Desestruturação simples
 
 const empresa = {
-    nome: 'Rocketseat',
+    nome_desestruturado: 'Rocketseat',
     endereco: {
     cidade: 'Rio do Sul',
     estado: 'SC',
     }
 };
 
-/*
-const { nome, endereco: { cidade, estado } } = empresa;
 
-console.log(nome); // Rocketseat
+const { nome_desestruturado, endereco: { cidade, estado } } = empresa;
+
+console.log(nome_desestruturado); // Rocketseat
 console.log(cidade); // Rio do Sul
 console.log(estado); // SC
-*/
+
+
+
+// 4.2 Desestruturação em parâmetros
+
+function mostraInfo(usuario) {
+    return `${usuario.nome} tem ${usuario.idade} anos.`;
+}
+console.log(mostraInfo({ nome: 'Diego', idade: 23 }));
+
+
+
+
+function mostraInfoDesestruturacao({ nome, idade}) {
+    return `${nome} tem ${idade} anos.`;
+}
+console.log('Desest:', mostraInfoDesestruturacao({ nome: 'Diego', idade: 23 }));
 
 
 // 5th exercise
 
 // 5.1 Rest
 
-arrayy = [1, 2, 3, 4, 5, 6];
+var array = [1, 2, 3, 4, 5, 6];
 
-var x, y = arrayy => x, rest;
+const [ x, ...y ] = array;
 
 console.log(x); // 1
 console.log(y); // [2, 3, 4, 5, 6]
 
+function soma(...args){
+    var soma = 0;
+
+    //for (let arg of args)
+    //    soma += arg;
+
+    soma = args.reduce((total, next) => total + next);
+
+    return soma;
+}
 
 console.log(soma(1, 2, 3, 4, 5, 6)); // 21
 console.log(soma(1, 2)); // 3
@@ -226,6 +252,13 @@ usuario = {
    };
 
 
+const usuario2 = { ...usuario, nome: 'Viniman' };
+const usuario3 = { ...usuario, cidade: 'Lontras' };
+
+console.log(usuario2);
+console.log(usuario3);
+
+
 
 // 6th exersice
 // Template Literals
@@ -233,6 +266,8 @@ usuario = {
 usuario = 'Diego';
 idade = 23;
 console.log('O usuário ' + usuario + ' possui ' + idade + ' anos');
+console.log('Template Literals');
+console.log(`O usuário ${usuario} possui ${idade} anos`); // -> usar crase
 
 
 
@@ -246,3 +281,15 @@ usuario = {
     idade: idade,
     cidade: 'Rio do Sul',
 };
+
+console.log(usuario);
+
+nome = 'Diego';
+idade = 23;
+usuario = {
+    nome,
+    idade,
+    cidade: 'Rio do Sul',
+};
+
+console.log(usuario);
