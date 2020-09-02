@@ -93,3 +93,39 @@ Biblioteca Axios: trabalhar com uma Biblioteca com requisições assincronas
 yarn add axios -> não é dependencia de desenvolvimento entao nao precisa do -D
 
 axios.get e todas as funcoes do axios retornam promises
+
+
+
+
+
+
+
+
+
+------------------------------------
+           CURSO NODE
+------------------------------------
+
+npm init -y
+
+vai criar package.json : guarda dependencias
+
+npm install express : micro framework para lidar com rotas e views
+
+package-lock.json : apenas para cash - saber quais dependencias estao instaladas
+
+node server.js
+
+req = todas as informações sobre a requisição
+res = resposta que vai dar para o cliente/navegador
+
+
+npm install -D nodemon
+Nodemon: faz reinicialização do servidor quando alterar alguma coisa no código do servidor
+
+package.json devDependences(-D): dependencias usadas apenas no ambiente de desenvolvimento
+
+
+"dev": "nodemon server.js"
+Agora roda com: npm run dev
+
