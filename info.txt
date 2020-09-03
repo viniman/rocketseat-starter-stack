@@ -182,3 +182,8 @@ mongoose.connect('mongodb://user:password@localhost:27017/nodeapi');
 Require dos models
 Fazer require automático em todos os arquivos de um diretório
 npm install require-dir
+
+
+MVC = model view controller
+
+json = java script object notation
