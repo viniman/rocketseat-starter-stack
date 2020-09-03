@@ -187,3 +187,8 @@ npm install require-dir
 MVC = model view controller
 
 json = java script object notation
+
+
+
+Software para testar as rotas da API: Insomnia
+https://insomnia.rest/
