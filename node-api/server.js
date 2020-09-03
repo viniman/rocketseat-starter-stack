@@ -4,6 +4,8 @@ const requireDir = require('require-dir');
 
 // Iniciando o App
 const app = express();
+app.use(express.json()); // permitir que envio dados para a aplicação no formato de json
+// formato json: mais utilizados para api rest
 
 // Iniciando o DB
 mongoose.connect(
