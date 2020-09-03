@@ -223,3 +223,30 @@ Manipular código HTML pelo JavaScript
 
 npm install -g create-react-app
 -g --global: instalar de modo global
+
+
+Rodar a aplicação
+npm start
+
+
+Conceito de componentização (components)
+index.js : primeiro arquivo aberto pela aplicação do React
+
+Component é um conjunto de parte visual (que é o nosso HTML, parte estrutural), a parte código,
+que é a parte funcional em JS e a parte de estilização que é o CSS
+
+
+Acessar informações de um uma API rest de endereço externo: usar axios
+yarn add axios
+
+
+
+
+React tem métodos de ciclo de vida: são métodos que executam automaticamente baseado
+no ciclo de vida, ciclo de montagem do próprio componente na tela
+
+
+Arrow function não sobrescreve o valor do this, continua sendo da classe pai
+
+
+Criação de variavel de estado
