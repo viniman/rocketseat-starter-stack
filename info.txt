@@ -192,3 +192,11 @@ json = java script object notation
 
 Software para testar as rotas da API: Insomnia
 https://insomnia.rest/
+
+
+Criar um pagination
+npm install mongoose-paginate
+
+
+Mata todos os processos node:
+killall -9 node
