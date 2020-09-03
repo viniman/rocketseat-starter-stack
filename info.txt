@@ -129,3 +129,56 @@ package.json devDependences(-D): dependencias usadas apenas no ambiente de desen
 "dev": "nodemon server.js"
 Agora roda com: npm run dev
 
+
+
+
+------------------------------------
+         MONGO DB | DOCKER
+------------------------------------
+
+
+install docker
+https://docs.docker.com/engine/install/ubuntu/
+
+
+install mongo db on docker
+docker pull mongo
+
+Subir uma nova máquina virtual/container contendo essa instalação rodando
+docker run --name mongodb -p 27017:27017 -d mongo
+
+-p :redirecionamento de porta (pois o conteiner será uma outra máquina)
+Ao acessar a porta 27017 da máquina, vai acessar a porta 27017 do container do mongodb
+27017: porta padrão do mongodb
+-d: qual imagem quero utilizar
+
+docker ps: quais imagens estão rodando
+
+Utilizar Robo3T
+https://robomongo.org/
+
+Imagens docker que estão pausadas, não estão rodando/online
+docker ps -a (vai retornar all)
+
+
+Apenas executar (não precisa dar run novamente)
+docker start mongo
+
+
+
+Dependencia de produção
+Mongoose: ORM de bancos não relacionais com o mongodb
+ORM Encapsula a lógica das operações do BD através do código
+Em vez de usar SQL, sempre vai usar apenas códigos javascripts pra fazer os SQL
+ORM: Object-relational mapping: Mapeamento objeto-relacional
+npm install mongoose
+
+
+Se tiver usuário e senha
+mongoose.connect('mongodb://user:password@localhost:27017/nodeapi');
+
+
+
+Require dos models
+Fazer require automático em todos os arquivos de um diretório
+npm install require-dir
