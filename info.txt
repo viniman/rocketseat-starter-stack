@@ -200,3 +200,8 @@ npm install mongoose-paginate
 
 Mata todos os processos node:
 killall -9 node
+
+
+Permitir acesso à API por outros dominios: CORS
+Permitir todo tipo de acesso externo
+npm install cors
