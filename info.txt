@@ -205,3 +205,21 @@ killall -9 node
 Permitir acesso à API por outros dominios: CORS
 Permitir todo tipo de acesso externo
 npm install cors
+
+
+
+
+
+------------------------------------
+              REACT
+------------------------------------
+
+manipular a DOM
+Criar SPAs = single page applications
+Flexibilidade e organização fundamental
+Não usa um simples HTML, é um JSX
+Manipular código HTML pelo JavaScript
+
+
+npm install -g create-react-app
+-g --global: instalar de modo global
