@@ -250,3 +250,10 @@ Arrow function não sobrescreve o valor do this, continua sendo da classe pai
 
 
 Criação de variavel de estado
+o código ouve que teve uma alteração no código
+e que a variavel foi alterada
+então ele recalcula automaticamente
+
+O método render vai ficar sempre escutando a alteração das variaveis dentro
+da variavel de estado, e sempre que o estado alterar, o método render executa de novo
+e traz as alterações em tela
