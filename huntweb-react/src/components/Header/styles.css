@@ -9,3 +9,8 @@ header#main-header {
     justify-content: center;
     align-items: center;
 }
+
+header#main-header a {
+    text-decoration: none;
+    color: inherit;
+}
