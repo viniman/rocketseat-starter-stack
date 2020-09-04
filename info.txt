@@ -257,3 +257,16 @@ então ele recalcula automaticamente
 O método render vai ficar sempre escutando a alteração das variaveis dentro
 da variavel de estado, e sempre que o estado alterar, o método render executa de novo
 e traz as alterações em tela
+
+
+
+
+
+Parte de navegação da aplicação
+Biblioteca utilizada para fazer a navegação
+yarn react-router-dom
+
+
+BrowserRouter: definir que esta utilizando as rotas atraves de um browser
+
+Switch: permitir que apenas uma rota seja chamada ao mesmo tempo
