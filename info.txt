@@ -298,7 +298,8 @@ https://medium.com/codespace69/react-native-run-react-native-got-error-sdk-locat
 Criar aplicação
 npx react-native init huntapp
 
-Start Metro Bundler [Dev Server]
+Start Metro Bundler [Dev Server] - package do react native
+- atualização em tempo real no emulador
 npx react-native start
 
 Rodar app
@@ -327,4 +328,24 @@ Todos elementos tem automaticamente o display: flex
 
 
 Parte de navegação
-yarn add react navigation
+yarn add react-navigation-stack
+
+
+createStackNavigation
+Navegação por stack, navegação por cliques em botões
+
+Existe também navegação por abas, menu lateral
+
+
+React Navigations | StackNavigator:
+https://reactnavigation.org/docs/stack-navigator/
+https://reactnavigation.org/docs/upgrading-from-4.x/
+
+
+Solution errors:
+Just kill all node process and start npm server and run application:
+Step1: run command killall -9 node
+Step2: run command npm start
+Step3: run command react-native run-ios OR react-native run-android
+
+
