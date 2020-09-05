@@ -306,6 +306,10 @@ npx react-native run-android
 yarn run react-native run-android
 yarn android
 
+Dar reload no app: duplo clique no R
+
+Debug Mode: Ctrl + M (ou no dispositivo fisico shake)
+
 index.js é o arquivo introdutório da aplicação/principal
 É o arquivo que vai carregar assim que a aplicação for montada
 
@@ -315,3 +319,12 @@ AppRegistry utilizado uma unica vez em toda a aplicação
 Registra um arquivo para ser o arquivo inicial da aplicação
 
 Importa para ser o arquivo inicial: App.js
+
+flexBoxLayout: forma de definir estilos no react/vindo do css3
+
+Todos elementos tem automaticamente o display: flex
+
+
+
+Parte de navegação
+yarn add react navigation
