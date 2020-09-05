@@ -165,6 +165,8 @@ Apenas executar (não precisa dar run novamente)
 docker start mongo
 
 
+mongodb: http://localhost:27017/
+
 
 Dependencia de produção
 Mongoose: ORM de bancos não relacionais com o mongodb
@@ -270,3 +272,46 @@ yarn react-router-dom
 BrowserRouter: definir que esta utilizando as rotas atraves de um browser
 
 Switch: permitir que apenas uma rota seja chamada ao mesmo tempo
+
+
+
+API http://localhost:3001/api/products?page=2
+
+
+------------------------------------
+            REACT NATIVE
+------------------------------------
+
+
+Install Android JDK
+https://react-native.rocketseat.dev/android/linux
+
+Emulador
+https://react-native.rocketseat.dev/android/emulador
+
+
+Executando app via smartphone
+https://react-native.rocketseat.dev/usb/android
+https://medium.com/codespace69/react-native-run-react-native-got-error-sdk-location-not-found-5ff2116269ec
+
+
+Criar aplicação
+npx react-native init huntapp
+
+Start Metro Bundler [Dev Server]
+npx react-native start
+
+Rodar app
+npx react-native run-android
+yarn run react-native run-android
+yarn android
+
+index.js é o arquivo introdutório da aplicação/principal
+É o arquivo que vai carregar assim que a aplicação for montada
+
+app.json: nome da aplicação mostrada para o usuário
+
+AppRegistry utilizado uma unica vez em toda a aplicação
+Registra um arquivo para ser o arquivo inicial da aplicação
+
+Importa para ser o arquivo inicial: App.js
