@@ -251,7 +251,7 @@ no ciclo de vida, ciclo de montagem do próprio componente na tela
 Arrow function não sobrescreve o valor do this, continua sendo da classe pai
 
 
-Criação de variavel de estado
+Criação de variavel de estado [state]
 o código ouve que teve uma alteração no código
 e que a variavel foi alterada
 então ele recalcula automaticamente
@@ -328,7 +328,8 @@ Todos elementos tem automaticamente o display: flex
 
 
 Parte de navegação
-yarn add react-navigation-stack
+yarn add react-navigation-stack -> versão mais nova
+yarn add react-navigation@2.18.3 -> versão usada
 
 
 createStackNavigation
