@@ -3,6 +3,14 @@ const mongoose = require('mongoose');
 const Product = mongoose.model('Product');
 
 module.exports = {
+    async help(req, res) {
+        const { page = 1} = req.query; // usando desestruturação - page = 1 valor padrao pra quando a rota nao consegue encontrar esse parametro
+        const products = await Product.paginate({}, { page, limit: 10});   // page utiliza short syntax (page = page:page) | troca find() por paginate primieor param {} filtro where
+        // await vai fazer a próxima linha executar só depois de buscar os registros do BD
+
+        return res.json({"result": "route not right, instead use /api/products"});
+    },
+    
     async index(req, res) {
         const { page = 1} = req.query; // usando desestruturação - page = 1 valor padrao pra quando a rota nao consegue encontrar esse parametro
         const products = await Product.paginate({}, { page, limit: 10});   // page utiliza short syntax (page = page:page) | troca find() por paginate primieor param {} filtro where

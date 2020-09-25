@@ -127,7 +127,7 @@ package.json devDependences(-D): dependencias usadas apenas no ambiente de desen
 
 
 "dev": "nodemon server.js"
-Agora roda com: npm run dev
+Agora roda com: npm run dev ou yarn dev
 
 
 
